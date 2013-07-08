@@ -13,8 +13,8 @@
           <li>
             <h3>Language Lists</h3>
             <ul class="links">
-            	<%language_list.each do |l|%>
-                <li><%= link_to l.name,"#"%> [<%=l.snippets_count%>] </li>
+            	<%language_list.each do |l| %>
+                <li><%= link_to l.name, l %> [<%= l.snippets_count %>] </li>
 	            <% end %>
             </ul>
           </li>
@@ -22,7 +22,7 @@
       </div>
       <div id="content">
         <div id="header">
-          <h1><%=link_to "MyCode","/" %></h1></br>
+          <h1><%= link_to "MyCode","/" %></h1></br>
           <h2>Share my code</h2>
         </div>
         <div id="getting-started">

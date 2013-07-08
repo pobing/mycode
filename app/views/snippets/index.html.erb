@@ -14,7 +14,7 @@
 <% @snippets.each do |snippet| %>
   <tr>
     <td><%=link_to snippet.name,snippet %></td>
-    <td><%=link_to snippet.lan_name,"#" %></td>
+    <td><%=link_to snippet.lan_name,snippet.category %></td>
     <td><%= snippet.description %></td>
     <td><%= snippet.created_at %></td>
     <td><%= link_to 'Edit', edit_snippet_path(snippet) %></td>

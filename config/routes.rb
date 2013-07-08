@@ -1,6 +1,6 @@
 Mycode::Application.routes.draw do
   resources :snippets
-
+  resources :categories,:only => [:show]
   mount Resque::Server, :at => "/resque"
 
   # The priority is based upon order of creation:

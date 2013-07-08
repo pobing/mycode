@@ -21,15 +21,6 @@ ActiveRecord::Schema.define(:version => 20130708055616) do
     t.integer  "snippets_count"
   end
 
-  create_table "snippet_codes", :force => true do |t|
-    t.string   "name"
-    t.integer  "language"
-    t.text     "plain_code"
-    t.text     "highlighted_code"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
-  end
-
   create_table "snippets", :force => true do |t|
     t.string   "name"
     t.integer  "language"
