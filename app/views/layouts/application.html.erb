@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mycode</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+ <div id="page">
+      <div id="sidebar">
+        <ul id="sidebar-items">
+          <li>
+            <h3>Language Lists</h3>
+            <ul class="links">
+            	<%language_list.each do |l|%>
+                <li><%= link_to l.name,"#"%> [<%=l.snippets_count%>] </li>
+	            <% end %>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div id="content">
+        <div id="header">
+          <h1><%=link_to "MyCode","/" %></h1></br>
+          <h2>Share my code</h2>
+        </div>
+        <div id="getting-started">
+         <%= yield %>
+        </div>
+      </div>
+
+      <div id="footer">Mycode Copyright © 2013 pobing</div>
+    </div>
+</body>
+</html>
