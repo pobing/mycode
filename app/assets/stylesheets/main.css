@@ -165,3 +165,7 @@
       .filename {
         font-style: italic;
       }
+      #user_nav {
+        padding-left: 75px;
+        padding-right: 30px;
+      }

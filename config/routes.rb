@@ -1,4 +1,8 @@
 Mycode::Application.routes.draw do
+  devise_for :users
+
+  # devise_for :installs
+
   resources :snippets
   resources :categories,:only => [:show]
   mount Resque::Server, :at => "/resque"
