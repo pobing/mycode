@@ -3,7 +3,11 @@ Mycode::Application.routes.draw do
 
   # devise_for :installs
 
-  resources :snippets
+  resources :snippets do
+    member do 
+      get 'download'
+    end
+  end
   resources :categories,:only => [:show]
   mount Resque::Server, :at => "/resque"
 

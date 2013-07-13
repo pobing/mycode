@@ -1,10 +1,14 @@
-<h2><%= link_to 'New Snippet', new_snippet_path %></h2>
+
+<% if user_signed_in? %>
+  <h2><%= link_to 'New Snippet', new_snippet_path %></h2>
+<% end %>
 <br />
 
 <table>
   <tr>
     <th>Name</th>
     <th>Language</th>
+    <th>Author</th>
     <th>Description</th>
     <th>CreatedAt</th>
     <th></th>
@@ -15,6 +19,7 @@
   <tr>
     <td><%=link_to snippet.name,snippet %></td>
     <td><%=link_to snippet.lan_name,snippet.category %></td>
+    <td><%= link_to snippet.author, "#" %>
     <td><%= snippet.description %></td>
     <td><%= snippet.created_at.strftime("%Y-%m-%-d %H::%M::%S") %></td>
     <td><%= link_to 'Edit', edit_snippet_path(snippet) %></td>

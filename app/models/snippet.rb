@@ -1,6 +1,7 @@
 class Snippet < ActiveRecord::Base
   attr_accessible :highlighted_code, :language, :name, :source_code, :description
   belongs_to :category,:foreign_key => 'language', :counter_cache => true
+  belongs_to :user
   
   @queue = :snippet_queue
 
@@ -13,5 +14,9 @@ class Snippet < ActiveRecord::Base
 
   def lan_name
   	self.category.try(:name)
+  end
+
+  def author
+    self.user.try(:email) || "admin"
   end
 end

@@ -6,8 +6,11 @@ class SnippetsController < ApplicationController
   # GET /snippets
   # GET /snippets.json
   def index
-    @snippets = Snippet.all
-
+    @snippets = if !params[:key].blank?
+      Snippet.where("name like ? ","%#{params[:key]}%")
+    else
+      Snippet.all
+    end
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @snippets }
@@ -45,6 +48,7 @@ class SnippetsController < ApplicationController
   # POST /snippets.json
   def create
     @snippet = Snippet.new(params[:snippet])
+    @snippet.user_id = current_user.id 
     respond_to do |format|
       if @snippet.save
         Resque.enqueue(Snippet, @snippet.id)
@@ -84,4 +88,14 @@ class SnippetsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def download 
+    @snippet = Snippet.find(params[:id])
+    @content = @snippet.source_code # get the content 
+    file_name = "#{@snippet.name}.txt" 
+    send_data @content,  
+    :type => 'text',   
+    :disposition => "attachment; filename=#{file_name}"
+  end
+
 end

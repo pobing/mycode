@@ -23,11 +23,20 @@
       <div id="content">
         <div id="header">
           <h1><%= link_to "MyCode","/" %></h1></br>
-          <h2>Share my code</h2>
+          <h2>Share my code</h2> 
+          <!-- user-nav -->
+          <%= render "layouts/user_nav" %>
+          <!-- user-nav -->
         </div>
-        <!-- user-nav -->
-        <%= render "layouts/user_nav" %>
-        <!-- user-nav -->
+       
+        <div class="search">
+            <%= form_tag snippets_path, :method => 'get' do %>
+              <p>
+                <%= text_field_tag :key, params[:key] %>
+                <%= submit_tag "Search", :name => nil %>
+              </p>
+            <% end %>
+        </div>
         <div id="getting-started">
          <%= yield %>
         </div>
