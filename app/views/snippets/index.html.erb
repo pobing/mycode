@@ -1,31 +1,19 @@
 
-<% if user_signed_in? %>
-  <h2><%= link_to 'New Snippet', new_snippet_path %></h2>
-<% end %>
-<br />
+<div class="span8">
+  <% @snippets.each do |snippet| %>
+    <h2><%=link_to snippet.name,snippet %></h2>
+    <p>语言类别：<%=link_to snippet.lan_name,snippet.category %> &nbsp;&nbsp;<%= link_to snippet.author, "#"%> </p>
+    <p><%= snippet.description %> </p>
+    <p>
+      <%= snippet.created_at.strftime("%Y-%m-%-d %H:%M:%S") %> 
+      <%  if current_user #&& current_user.id == snippet.user.id %>
+        <%= link_to 'Edit', edit_snippet_path(snippet) %> 
+        <%= link_to 'Destroy', snippet, method: :delete, data: { confirm: 'Are you sure?' } %> 
+      <%  end %>
+    </p>
+    <p><%=link_to "View details »",snippet,:class => "btn" %>
+    <% end %>
+</div>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Language</th>
-    <th>Author</th>
-    <th>Description</th>
-    <th>CreatedAt</th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @snippets.each do |snippet| %>
-  <tr>
-    <td><%=link_to snippet.name,snippet %></td>
-    <td><%=link_to snippet.lan_name,snippet.category %></td>
-    <td><%= link_to snippet.author, "#" %>
-    <td><%= snippet.description %></td>
-    <td><%= snippet.created_at.strftime("%Y-%m-%-d %H::%M::%S") %></td>
-    <td><%= link_to 'Edit', edit_snippet_path(snippet) %></td>
-    <td><%= link_to 'Destroy', snippet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
 
 

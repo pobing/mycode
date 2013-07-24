@@ -3,6 +3,9 @@ require 'net/http'
 require 'uri'
 
 class SnippetsController < ApplicationController
+  
+  before_filter :login_required,:except => [:index,:show]
+  
   # GET /snippets
   # GET /snippets.json
   def index

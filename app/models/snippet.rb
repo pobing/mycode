@@ -3,6 +3,8 @@ class Snippet < ActiveRecord::Base
   belongs_to :category,:foreign_key => 'language', :counter_cache => true
   belongs_to :user
   
+  default_scope :order => 'created_at DESC'
+
   @queue = :snippet_queue
 
   def self.perform(id)

@@ -1,0 +1,14 @@
+body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.code_text{
+  width:600px;
+  height:300px;
+}
+
+.desc_area{
+ width:600px;
+ height:150px;  
+}

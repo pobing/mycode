@@ -1,0 +1,6 @@
+<h3>Language Lists</h3>
+<ul>
+  <%  language_list.each do |l| %>
+    <li><%= link_to l.name, l %> [<%= l.snippets_count %>] </li>
+  <% end %>
+</ul>

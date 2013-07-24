@@ -11,8 +11,8 @@
 </p>
 
 <p>
-	<b>Description</b>
-	<%=@snippet.description%>
+  <b>Description</b>
+  <%=@snippet.description%>
 </p>
 
 <p>
@@ -20,10 +20,13 @@
   <% if @snippet.highlighted_code.present? %>
     <%=raw @snippet.highlighted_code %>
   <%else%>
-    <pre><%= @snippet.source_code %></pre>
-  <% end %>
+  <pre><%= @snippet.source_code %></pre>
+<% end %>
 </p>
-<%= link_to 'Download code',download_snippet_path(@snippet) %>
-<%= link_to 'Edit', edit_snippet_path(@snippet) %> |
+<%= link_to '下载代码',download_snippet_path(@snippet) %>
+<%  if current_user #&& current_user.id == snippet.user.id %>
+  <%= link_to 'Edit', edit_snippet_path(@snippet) %> 
+  <%= link_to 'Destroy', @snippet, method: :delete, data: { confirm: 'Are you sure?' } %> 
+<%  end %>
 <%= link_to 'Back', snippets_path %> 
 

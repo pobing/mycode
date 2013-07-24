@@ -1,16 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Language:</b>
-  <%= @category.name %>
+  <b><%= @category.name %></b> 分类下的代码
 </p>
 
 <% @snippets.each do |s| %>
 <p>
-  <b>Name:</b>
-  <%= s.name %>
+  
+  <h3><%=link_to s.name, s %></h3>
 </p>
-
+<p>
+  <b>Author:</b>
+  <%= s.author %>
+</p>
 <p>
   <b>Language:</b>
   <%= s.lan_name %>
@@ -22,7 +24,6 @@
 </p>
 
 <p>
-  <b>Highlighted code:</b>
   <% if s.highlighted_code.present? %>
     <%=raw s.highlighted_code %>
   <%else%>
