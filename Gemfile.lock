@@ -154,6 +154,7 @@ DEPENDENCIES
   devise (~> 2.2.4)
   jquery-rails
   less-rails
+  mime-types
   mysql2
   rails (= 3.2.13)
   resque
