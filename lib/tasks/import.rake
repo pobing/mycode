@@ -4,6 +4,7 @@ require 'csv'
 
 desc "Import category data from language.csv file"
 task :import => [:environment] do
+	Category.delete_all
   CSV.foreach("db/language.csv") do |row|
     Category.create({
     	:short_name => row[0],

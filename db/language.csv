@@ -1,20 +1,200 @@
-abap,ABAP
-antlr,ANTLR
-antlr-as,ANTLR
-antlr-as,ANTLR With ActionScript Target
-antlr-csharp,ANTLR With C# Target
-antlr-cpp,ANTLR With CPP Target
-antlr-java,ANTLR With Java Target
-antlr-objc,ANTLR With ObjectiveC Target
-antlr-perl,ANTLR With Perl Target
-antlr-python,ANTLR With Python Target
-antlr-ruby,ANTLR With Ruby Target
 as, ActionScript
 as3,ActionScript 3
-ada,Ada
 apacheconf,ApacheConf
 applescript,AppleScript
-aspectj,AspectJ
-asy,Asymptote
-autoit,AutoIt
-awk,Awk
+bugs, BUGS
+bash,Bash
+console, Bash Session
+c,C
+csharp,C#
+cpp,C++
+cbmbas,CBM BASIC V2
+cmake,CMake
+css,CSS
+css+django,CSS+Django/Jinja
+css+genshitext,CSS+Genshi Text
+css+lasso,CSS+Lasso
+css+mako,CSS+Mako
+css+myghty,CSS+Myghty
+css+php,CSS+PHP
+css+erb,CSS+Ruby
+css+smarty,CSS+Smarty
+coffee-script,CoffeeScript
+common-lisp,Common Lisp
+d,D
+dtd,DTD
+control,Debian Control file
+sourceslist,Debian Sourcelist
+delphi,Delphi
+diff,Diff
+django,Django/Jinja
+erb,ERB
+erlang,Erlang
+erl,Erlang erl session
+fsharp,FSharp
+factor,Factor
+fancy,Fancy
+fan,Fantom
+felix,Felix
+fortran,Fortran
+Clipper,FoxPro
+gas,GAS
+glsl,GLSL
+genshi,Genshi
+genshitext,Genshi Text
+pot,Gettext Catalog
+Cucumber,Gherkin
+gnuplot,Gnuplot
+go,Go
+html,HTML
+html+cheetah,HTML+Cheetah
+html+django,HTML+Django/Jinja
+html+evoque,HTML+Evoque
+html+genshi,HTML+Genshi
+html+lasso,HTML+Lasso
+html+mako,HTML+Mako
+html+myghty,HTML+Myghty
+html+php,HTML+PHP
+html+smarty,HTML+Smarty
+html+velocity,HTML+Velocity
+http,HTTP
+haml,Haml
+haskell,Haskell
+hx,Haxe
+haxeml,Hxml
+hybris,Hybris
+idl,IDL
+ini,INI
+irc,IRC logs
+igor,Igor
+io,Io
+ioke,Ioke
+jags,JAGS
+json,JSON
+jade,Jade
+java,Java
+jsp,Java Server Page
+js,JavaScript
+js+cheetah,JavaScript+Cheetah
+js+django,JavaScript+Django/Jinja
+js+genshitext,JavaScript+Genshi Text
+js+lasso,JavaScript+Lasso
+js+mako,JavaScript+Mako
+js+myghty,JavaScript+Myghty
+js+php,JavaScript+PHP
+js+erb,JavaScript+Ruby
+js+smarty,JavaScript+Smarty
+julia,Julia
+jlcon,Julia console
+kconfig,Kconfig
+koka,Koka
+kotlin,Kotlin
+llvm,LLVM
+lasso,Lasso
+lighty,Lighttpd configuration file
+lhs,Literate Haskell
+live-script,LiveScript
+logos,Logos
+logtalk,Logtalk
+lua,Lua
+maql,MAQL
+moocode,MOOCode
+mxml,MXML
+make,Makefile
+mako,Mako
+mason,Mason
+matlab,Matlab
+matlabsession,Matlab session
+minid,MiniD
+modelica,Modelica
+modula2,Modula-2
+trac-wiki,MoinMoin/Trac Wiki markup
+monkey,Monkey
+moon,MoonScript
+mscgen,Mscgen
+mupad,MuPAD
+mysql,MySQL
+myghty,Myghty
+nasm,NASM
+nsis,NSIS
+nemerle,Nemerle
+nginx,Nginx configuration file
+objective-c,Objective-C
+objective-c++,Objective-C++
+objective-j,Objective-J
+octave,Octave
+ooc,Ooc
+opa,Opa
+php,PHP
+plpgsql,PL/pgSQL
+perl,Perl
+perl6,Perl6
+postscript,PostScript
+postgresql,PostgreSQL SQL dialect
+psql,PostgreSQL console (psql)
+powershell,PowerShell
+prolog,Prolog
+properties,Properties
+python,Python
+python3,Python 3
+py3tb,Python 3.0 Traceback
+pytb,Python Traceback
+pycon,Python console session
+rhtml,RHTML
+spec,RPMSpec
+rd,Rd
+RobotFramework,RobotFramework
+rb,Ruby
+rust,Rust
+scss,SCSS
+sql,SQL
+Swig,SWIG
+sass,Sass
+scala,Scala
+ssp,Scalate Server Page
+scaml,Scaml
+scheme,Scheme
+scilab,Scilab
+shell-session,Shell Session
+smalltalk,Smalltalk
+smarty,Smarty
+snobol,Snobol
+squidconf,SquidConf
+stan,Stan
+sml,Standard ML
+tcl,Tcl
+tex,TeX
+tea,Tea
+text,Text only
+treetop,Treetop
+ts,TypeScript
+vb.net,VB.net
+vgl,VGL
+vala,Vala
+velocity,Velocity
+vim,VimL
+xml,XML
+xml+cheetah,XML+Cheetah
+xml+django,XML+Django/Jinja
+xml+evoque,XML+Evoque
+xml+lasso,XML+Lasso
+xml+mako,XML+Mako
+xml+myghty,XML+Myghty
+xml+php,XML+PHP
+xml+erb,XML+Ruby
+xml+smarty,XML+Smarty
+xml+velocity,XML+Velocity
+xquery,XQuery
+yaml,YAML
+aspx-cs,aspx-cs
+aspx-vb,aspx-vb
+ahk,autohotkey
+c-objdump,c-objdump
+ca65,ca65
+cfs,cfstatement
+cpp-objdump,cpp-objdump
+d-objdump,d-objdump
+nesc,nesC
+objdump,objdump
+registry,reg
+sqlite3,sqlite3con
