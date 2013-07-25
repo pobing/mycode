@@ -6,21 +6,25 @@
 
 ## 技术
 
-  * ruby 1.9.3
-  * rails 3.2.3
-  * mysql
-  * resque
-  * redis
+  * ruby 1.9.3  
+  * rails 3.2.3  
+  * mysql  
+  * resque  
+  * redis  
   ...
 
 ##使用
 
-  $ cd /tmp
-  $ git clone git@github.com:pobing/mycode.git
-  $ cd mycode
-  $ bundle install
-  $ bundle exec rake setup
-  $ rails s
+  $ cd /tmp  
+  $ git clone git@github.com:pobing/mycode.git  
+  $ cd mycode  
+  $ bundle install  
+  $ bundle exec rake setup  
+  $ rake  
+  $ rails s  
+
+##demo
+[http://mycode.herokuapp.com/](http://mycode.herokuapp.com/)
 
 ##参考资源
 
