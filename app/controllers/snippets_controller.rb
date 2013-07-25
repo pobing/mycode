@@ -54,7 +54,8 @@ class SnippetsController < ApplicationController
     @snippet.user_id = current_user.id 
     respond_to do |format|
       if @snippet.save
-        Resque.enqueue(Snippet, @snippet.id)
+        # Resque.enqueue(Snippet, @snippet.id) # heroku redis not free
+        # resque_job(@snippet)
         format.html { redirect_to @snippet, notice: 'Snippet was successfully created.' }
         format.json { render json: @snippet, status: :created, location: @snippet }
       else
@@ -70,7 +71,8 @@ class SnippetsController < ApplicationController
     @snippet = Snippet.find(params[:id])
     respond_to do |format|
       if @snippet.update_attributes(params[:snippet])
-        Resque.enqueue(Snippet, @snippet.id)
+        #Resque.enqueue(Snippet, @snippet.id)  # heroku redis not free
+        #resque_job(@snippet)
         format.html { redirect_to @snippet, notice: 'Snippet was successfully updated.' }
         format.json { head :no_content }
       else
@@ -101,4 +103,11 @@ class SnippetsController < ApplicationController
     :disposition => "attachment; filename=#{file_name}"
   end
 
+  protected
+
+  def resque_job(snippet)
+    uri = URI.parse('http://pygments.simplabs.com/')
+    request = Net::HTTP.post_form(uri,{ 'lang' => snippet.category.short_name, 'code' => snippet.source_code })
+    snippet.update_attribute(:highlighted_code, request.body)
+  end
 end

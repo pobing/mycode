@@ -1,9 +1,15 @@
+#encoding: utf-8
 class Snippet < ActiveRecord::Base
   attr_accessible :highlighted_code, :language, :name, :source_code, :description
   belongs_to :category,:foreign_key => 'language', :counter_cache => true
   belongs_to :user
   
   default_scope :order => 'created_at DESC'
+
+  validates :name, :length => { maximum: 20 , message: " name 最长为20个字符" },
+    :presence => { message: "name 不能为空" }
+  validates :source_code, :presence => { message: "source_code 不能为空" }
+
 
   @queue = :snippet_queue
 
