@@ -1,32 +1,31 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+  <b>标题:</b>
   <%= @snippet.name %>
 </p>
 
 <p>
-  <b>Language:</b>
+  <b>语言类别:</b>
   <%= @snippet.lan_name %>
 </p>
 
 <p>
-  <b>Description</b>
+  <b>代码描述</b>
   <%=@snippet.description%>
 </p>
 
 <p>
-  <b>Highlighted code:</b>
+  <b>源码:</b>
   <% if @snippet.highlighted_code.present? %>
     <%=raw @snippet.highlighted_code %>
   <%else%>
   <pre><%= @snippet.source_code %></pre>
 <% end %>
 </p>
-<%= link_to '下载代码',download_snippet_path(@snippet) %>
-<%  if current_user #&& current_user.id == snippet.user.id %>
-  <%= link_to 'Edit', edit_snippet_path(@snippet) %> 
-  <%= link_to 'Destroy', @snippet, method: :delete, data: { confirm: 'Are you sure?' } %> 
+<%= link_to '下载源码',download_snippet_path(@snippet) %>
+<%  if @snippet.is_own?  %>
+  <%= link_to '编辑', edit_snippet_path(@snippet) %>
+  <%= link_to '删除', @snippet, method: :delete, data: { confirm: '确定删除?' } %>
 <%  end %>
-<%= link_to 'Back', snippets_path %> 
-
+<%= link_to '返回', snippets_path %>

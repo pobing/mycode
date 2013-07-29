@@ -2,13 +2,13 @@
 class Snippet < ActiveRecord::Base
   attr_accessible :highlighted_code, :language, :name, :source_code, :description
   belongs_to :category,:foreign_key => 'language', :counter_cache => true
-  belongs_to :user
-  
+  belongs_to :user,:counter_cache => true
+
   default_scope :order => 'created_at DESC'
 
-  validates :name, :length => { maximum: 20 , message: " name 最长为20个字符" },
+  validates :name, :length => { maximum: 20 , message: "最长为20个字符" },
     :presence => { message: "name 不能为空" }
-  validates :source_code, :presence => { message: "source_code 不能为空" }
+  validates :source_code, :presence => { message: "不能为空" }
 
 
   @queue = :snippet_queue
@@ -26,5 +26,9 @@ class Snippet < ActiveRecord::Base
 
   def author
     self.user.try(:email) || "admin"
+  end
+
+  def is_own?
+      User.current && User.current.id == self.user_id
   end
 end

@@ -1,11 +1,11 @@
 <div class="span8">
+<b><%=@user.email%></b> 共发布 <%=@user.snippets_count %> 篇代码
   <% @snippets.each do |snippet| %>
     <h2><%=link_to snippet.name,snippet %></h2>
     <p>语言类别：<%=link_to snippet.lan_name,snippet.category %> &nbsp;&nbsp;<%= link_to snippet.author, snippet.user %> </p>
     <p><%= snippet.description %> </p>
     <p>
-      <%= snippet.created_at.strftime("%Y-%m-%-d %H:%M:%S") %>&nbsp;&nbsp;
-      <%=link_to "<i class='icon-star'></i>".html_safe, "#",:title =>"收藏" %>
+      <%= snippet.created_at.strftime("%Y-%m-%-d %H:%M:%S") %>
       <%  if snippet.is_own? %>
         <%= link_to '编辑', edit_snippet_path(snippet) %>
         <%= link_to '删除', snippet, method: :delete, data: { confirm: '确定删除?' } %>

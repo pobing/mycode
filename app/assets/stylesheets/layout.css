@@ -4,11 +4,17 @@ body {
 }
 
 .code_text{
-  width:600px;
-  height:300px;
+   width:600px;
+   height:300px;
 }
 
 .desc_area{
- width:600px;
- height:150px;  
+  width:600px;
+  height:150px;
+}
+
+a:hover {
+    background-color: #0088CC;
+    color: white;
+    text-decoration: none;
 }

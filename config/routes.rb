@@ -2,11 +2,11 @@ Mycode::Application.routes.draw do
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   devise_for :users
-
+  resources :users
   # devise_for :installs
 
   resources :snippets do
-    member do 
+    member do
       get 'download'
     end
   end

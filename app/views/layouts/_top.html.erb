@@ -6,7 +6,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="brand" href="/">MyCode</a>
+      <a class="brand" href="/">SoCode</a>
       <div class="nav-collapse collapse">
         <ul class="nav">
           <!--               <li class="active"><a href="#">m1</a></li>
@@ -19,7 +19,7 @@
                         </li>
           -->
           <% if user_signed_in? %>
-            <li><%= link_to "Add Your code！ ", new_snippet_path %></li>
+            <li><%= link_to "<i class='icon-file'> 添加代码</i>".html_safe, new_snippet_path %></li>
           <%  end %>
         </ul>
 
