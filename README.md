@@ -1,8 +1,7 @@
-# mycode app
+# socode app
 
 这是一个实现代码高亮的rails 网站项目。它可以对200多种编程语言片段进行高亮，格式化，并且可以分享，收藏代码。
-支持github 帐号和微博帐号登录。
-
+功能会持续完善.
 
 ## 技术
 
@@ -24,7 +23,7 @@
   $ rails s  
 
 ##demo
-[http://mycode.herokuapp.com/](http://mycode.herokuapp.com/)
+[http://socode.herokuapp.com/](http://socode.herokuapp.com/)
 
 ##参考资源
 
