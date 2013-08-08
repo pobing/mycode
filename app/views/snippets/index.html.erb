@@ -1,6 +1,6 @@
 <div class="span8">
   <% @snippets.each do |snippet| %>
-    <h2><%=link_to snippet.name,snippet %></h2>
+    <h4><%=link_to snippet.name,snippet %></h4>
     <p>语言类别：<%=link_to snippet.lan_name,snippet.category %> &nbsp;&nbsp;<%= link_to snippet.author, snippet.user %> </p>
     <p><%= snippet.description %> </p>
     <p>

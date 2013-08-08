@@ -18,3 +18,7 @@ a:hover {
     color: white;
     text-decoration: none;
 }
+
+.container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+width: 1100px;
+}
