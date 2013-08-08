@@ -207,6 +207,7 @@ DEPENDENCIES
   rails (= 3.2.13)
   rails_admin
   resque
+  safe_yaml (= 0.9.4)
   sass-rails (~> 3.2.3)
   therubyracer
   twitter-bootstrap-rails!
